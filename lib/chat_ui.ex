@@ -1,6 +1,6 @@
 defmodule ChatUI do
   # use N2O, with: [:nitro]
-  import NITRO
+  require NITRO
 
   # Головна сторінка
   def index do
@@ -12,7 +12,7 @@ defmodule ChatUI do
   end
 
   # Сторінка кімнати
-  def room(room) do
+  def room(_room) do
     NITRO.panel([
       NITRO.input(id: "message_input", placeholder: "Введіть повідомлення"),
       NITRO.button(id: "send_button", body: "Надіслати", postback: "send"),

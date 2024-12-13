@@ -1,6 +1,6 @@
 defmodule ChatRouter do
   # use N2O, with: [:nitro]
-  import NITRO
+  require NITRO
 
   # Головна сторінка
   def route("", _message) do
