@@ -3,7 +3,8 @@ defmodule ChatApp.Application do
 
   def start(_type, _args) do
     children = [
-      {Registry, keys: :unique, name: ChatRegistry} # Реєстр для кімнат
+      {Registry, keys: :unique, name: ChatRegistry}, # Реєстр для кімнат
+      # {N2O, []}
     ]
 
     opts = [strategy: :one_for_one, name: ChatApp.Supervisor]
